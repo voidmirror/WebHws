@@ -1,0 +1,13 @@
+<!-- <p>recipe-list works!</p> -->
+<div *ngFor="let rec of recipeService.recipeList">
+    <!-- <app-recipe [recipe]="rec"></app-recipe> -->
+    <div class="recipePreview">
+        <div class="previewName">
+            {{rec.name}}
+        </div>
+        <div class="previewDescription">
+            {{spliceDescription(rec.description)}}
+            <button class="btn btn-primary" (click)="selectRecipe(rec.id)">Подробнее</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<!-- <p>book works!</p> -->
+
+<ng-template #shopList let-modal>
+    <app-shop-list></app-shop-list>
+</ng-template>
+
+<div class="row" style="align-items: center;">
+    <button class="btn btn-outline-primary" (click)="openPopup(shopList)">Список покупок</button>
+    <div class="row" style="margin-top: 300px">
+        <div class="col" style="text-align: center;">
+            <app-recipe-list></app-recipe-list>
+        </div>
+        <div class="col" style="text-align: center;">
+            <app-recipe *ngIf="recipeService.isSelected" [recipe]="recipeService.findRecipe(recipeService.selectedRecipe)"></app-recipe>
+        </div>
+    </div>
+</div>

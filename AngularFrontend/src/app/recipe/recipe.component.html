@@ -1,0 +1,19 @@
+<!-- <p>recipe works!</p> -->
+<div class="rec">
+    <div class="recName">{{recipe.name}}</div>
+    <div class="row justify-content-md-center">
+        <ul class="col-4" style="text-align: left;">
+            <li *ngFor="let ing of recipe.ingredList">{{getIngredName(ing)}} - {{getIngredCount(ing)}}</li>
+        </ul>
+        <div class="recName">
+            Описание рецепта:
+        </div>
+        <div>
+            {{recipe.description}}
+        </div>
+        
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="addIngred()">Добавить продукты в список</button>
+    </div>
+</div>
